@@ -11,12 +11,13 @@ This microservice provides six functions:
 6.  Calculate years until breakeven
 
 ## Example Requests for API Endpoints
+Each sample below includes the request object (view this page in "code" mode for clear formatting), and each endpoint returns a json object containing a single float value that is the result of the requested calculation.
 <details>
 <summary>Calculate EV cost per mile</summary>
 <br>
   
 async function calcEvCostPerMile() {
-  const req = {
+  const request = {
     electricityPrice,
     evEfficiency
   };
@@ -27,7 +28,7 @@ async function calcEvCostPerMile() {
       'Content-Type': 'application/json',
       'Accept': '*/*'
     },
-    body: JSON.stringify(req)
+    body: JSON.stringify(request)
   };
   const response = await fetch('http://localhost:3000/calcEvCostPerMile', options);
   const result = await response.json();
@@ -40,7 +41,7 @@ async function calcEvCostPerMile() {
 <br>
   
 async function calcGasCostPerMile() {
-  const req = {
+  const request = {
     gasPrice,
     gasEfficiency
   };
@@ -51,7 +52,7 @@ async function calcGasCostPerMile() {
       'Content-Type': 'application/json',
       'Accept': '*/*'
     },
-    body: JSON.stringify(req)
+    body: JSON.stringify(request)
   };
   const response = await fetch('http://localhost:3000/calcGasCostPerMile', options);
   const result = await response.json();
@@ -64,7 +65,7 @@ async function calcGasCostPerMile() {
 <br>
   
 async function calcEquivalentMpgCost() {
-  const req = {
+  const request = {
     gasPrice,
     electricityPrice,
     evEfficiency
@@ -76,7 +77,7 @@ async function calcEquivalentMpgCost() {
       'Content-Type': 'application/json',
       'Accept': '*/*'
     },
-    body: JSON.stringify(req)
+    body: JSON.stringify(request)
   };
   const response = await fetch('http://localhost:3000/calcEquivalentMpgCost', options);
   const result = await response.json();
@@ -89,7 +90,7 @@ async function calcEquivalentMpgCost() {
 <br>
   
 async function calcEvAnnualCost() {
-  const req = {
+  const request = {
     electricityPrice,
     evEfficiency,
     annualMiles
@@ -101,7 +102,7 @@ async function calcEvAnnualCost() {
       'Content-Type': 'application/json',
       'Accept': '*/*'
     },
-    body: JSON.stringify(req)
+    body: JSON.stringify(request)
   };
   const response = await fetch('http://localhost:3000/calcEvAnnualCost', options);
   const result = await response.json();
@@ -114,7 +115,7 @@ async function calcEvAnnualCost() {
 <br>
   
 async function calcGasAnnualCost() {
-  const req = {
+  const request = {
     gasPrice,
     gasEfficiency,
     annualMiles
@@ -126,7 +127,7 @@ async function calcGasAnnualCost() {
       'Content-Type': 'application/json',
       'Accept': '*/*'
     },
-    body: JSON.stringify(req)
+    body: JSON.stringify(request)
   };
   const response = await fetch('http://localhost:3000/calcGasAnnualCost', options);
   const result = await response.json();
@@ -139,7 +140,7 @@ async function calcGasAnnualCost() {
 <br>
   
 async function calcYearsUntilBreakeven() {
-  const req = {
+  const request = {
     evPrice,
     gasVehiclePrice,
     taxCredit,
@@ -156,7 +157,7 @@ async function calcYearsUntilBreakeven() {
       'Content-Type': 'application/json',
       'Accept': '*/*'
     },
-    body: JSON.stringify(req)
+    body: JSON.stringify(request)
   };
   const response = await fetch('http://localhost:3000/calcYearsUntilBreakeven', options);
   const result = await response.json();
