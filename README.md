@@ -11,6 +11,7 @@ This microservice provides six functions:
 6.  Calculate years until breakeven
 
 ## Example Requests for API Endpoints
+#### [View a sample frontend with all of the below examples here](https://github.com/fatima-rizvi/EcoShift-Frontend)
 Each sample below includes the request object (view this page in "code" mode for clear formatting), and each endpoint returns a json object containing a single float value that is the result of the requested calculation.
 <details>
 <summary>Calculate EV cost per mile</summary>
