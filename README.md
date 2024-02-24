@@ -15,6 +15,7 @@ This microservice provides six functions:
 <summary>Calculate EV cost per mile</summary>
 <br>
 Example Request
-![image](https://github.com/fatima-rizvi/EcoShift-Microservice/assets/68958153/592da568-6c62-48ce-b2fb-fb25e714a340)
+![Calculate EV cost per mile](https://github.com/fatima-rizvi/EcoShift-Microservice/assets/68958153/34b7fc6e-f6a2-4707-9108-10c84fd8d3d3)
+
 
 </details>
