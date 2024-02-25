@@ -1,0 +1,19 @@
+{
+  "name": "ecoshift-microservice",
+  "version": "1.0.0",
+  "description": "Microservice for the EcoShift:  EV vs. Gas Calculator frontend application.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "EcoShift-Microservice"
+  },
+  "author": "Fatima Rizvi",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
