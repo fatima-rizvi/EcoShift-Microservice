@@ -11,37 +11,37 @@ app.use(cors({
     credentials: true
 }))
 
-app.post("/calcEvCostPerMile", (req, res, next) => {
+app.post("/calcEvCostPerMile", (req, res) => {
     let payload = req.body
     let costCalc = calcEvCostPerMile(payload.electricityPrice, payload.evEfficiency);
     res.json(costCalc)
 });
 
-app.post("/calcGasCostPerMile", (req, res, next) => {
+app.post("/calcGasCostPerMile", (req, res) => {
     let payload = req.body
     let costCalc = calcGasCostPerMile(payload.gasPrice, payload.gasEfficiency);
     res.json(costCalc)
 });
 
-app.post("/calcEquivalentMpgCost", (req, res, next) => {
+app.post("/calcEquivalentMpgCost", (req, res) => {
     let payload = req.body
     let costCalc = calcEquivalentMpgCost(payload.gasPrice, payload.electricityPrice, payload.evEfficiency);
     res.json(costCalc)
 });
 
-app.post("/calcEvAnnualCost", (req, res, next) => {
+app.post("/calcEvAnnualCost", (req, res) => {
     let payload = req.body
     let costCalc = calcEvAnnualCost(payload.electricityPrice, payload.evEfficiency, payload.annualMiles);
     res.json(costCalc)
 });
 
-app.post("/calcGasAnnualCost", (req, res, next) => {
+app.post("/calcGasAnnualCost", (req, res) => {
     let payload = req.body
     let costCalc = calcGasAnnualCost(payload.gasPrice, payload.gasEfficiency, payload.annualMiles)
     res.json(costCalc)
 });
 
-app.post("/calcYearsUntilBreakeven", (req, res, next) => {
+app.post("/calcYearsUntilBreakeven", (req, res) => {
     let payload = req.body
     let years = calcYearsUntilBreakeven(payload.evPrice, 
                                         payload.gasVehiclePrice, 
